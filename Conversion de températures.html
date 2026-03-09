@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo1</title>
+</head>
+<body>
+<script>
+var tempF=parseFloat(prompt("Saisir une température en Fahrenheit"));
+console.log("Une température en Fahrenheit :", tempF)
+function degreC(){
+   var res=(5/9)*(tempF-32)
+   return res
+}
+var tempC=degreC(tempF)
+console.log("cette température équivaut a", tempC,"degrés Celsius")
+
+</script>
+</body>
+</html>

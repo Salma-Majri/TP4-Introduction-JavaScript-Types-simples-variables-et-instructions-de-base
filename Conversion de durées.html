@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo2</title>
+</head>
+<body>
+<script>
+function hjms(total) {
+
+    
+    let jours = Math.floor(total / 86400); //24h * 60m * 60s = 86400s
+    let rJours = total % 86400;
+    let heures = Math.floor(rJours / 3600); //60m * 60s = 3600s
+    let rHeures = rJours % 3600;
+    let minutes = Math.floor(rHeures / 60);
+    let secondes = rHeures % 60;
+    var res="";
+
+    if (jours > 0 ) res += jours + "jours ";
+    if (heures > 0) res += heures + "heure ";
+    if (minutes > 0) res += minutes + "minutes ";
+    if (secondes > 0) res += secondes + "secondes "; 
+    return res
+}
+
+var DureeS = parseFloat(prompt("Saisir une durée en secondes"));
+console.log("Cette durée équivaut à : " + hjms(DureeS));
+
+
+
+
+
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo2</title>
+</head>
+<body>
+<script>
+function hjms(total) {
+
+    
+    let jours = Math.floor(total / 86400); //24h * 60m * 60s = 86400s
+    let rJours = total % 86400;
+    let heures = Math.floor(rJours / 3600); //60m * 60s = 3600s
+    let rHeures = rJours % 3600;
+    let minutes = Math.floor(rHeures / 60);
+    let secondes = rHeures % 60;
+    var res="";
+
+    if (jours > 0) res += jours + (jours > 1 ? " jours " : " jour ");
+    if (heures > 0) res += heures + (heures > 1 ? " heures " : " heure ");
+    if (minutes > 0) res += minutes + (minutes > 1 ? " minutes " : " minute ");
+    if (secondes > 0) res += secondes + (secondes > 1 ? " secondes" : " seconde");
+    return res
+}
+
+var DureeS = parseFloat(prompt("Saisir une durée en secondes"));
+console.log("Cette durée équivaut à : " + hjms(DureeS));
+
+
+
+
+
+</script>
+</body>
+</html>
