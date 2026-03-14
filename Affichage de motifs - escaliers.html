@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 4</title>
+</head>
+<body>
+    <script>
+        let taille = 7;
+
+        function triangle1(n) {
+            console.log("--- Triangle 1 avec while ---");
+            let i = 1;
+            
+            while (i < n) {
+                let row = "";
+                let j = 1;
+                
+                while (j <= i) {
+                    row += "*";
+                    j++;
+                }
+                
+                console.log(row);
+                i++;
+            }
+        }
+
+        function triangle2(n) {
+            console.log("--- Triangle 2 avec for ---");
+            
+            for (let i = 1; i < n; i++) {
+                let row = "";
+                
+                for (let j = 1; j <= i; j++) {
+                    row += "*";
+                }
+                
+                console.log(row);
+            }
+        }
+
+        triangle1(taille);
+        triangle2(taille);
+
+    </script>
+</body>
+</html>

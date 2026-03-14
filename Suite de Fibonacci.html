@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 6</title>
+</head>
+<body>
+    <script>
+        // Fibo1 
+        function fibo1() {
+            let n = parseInt(prompt("Fibo1 - Entrez le rang n souhaité :"));
+            
+            if (isNaN(n) || n < 0) {
+                console.log("Veuillez entrer un entier positif.");
+                return;
+            }
+
+            let u0 = 0;
+            let u1 = 1;
+            let un = 0;
+
+            if (n === 0) un = u0;
+            else if (n === 1) un = u1;
+            else {
+                for (let i = 2; i <= n; i++) {
+                    un = u0 + u1;
+                    u0 = u1; 
+                    u1 = un;
+                }
+            }
+            console.log("Fibo1 : Le terme de rang " + n + " est " + un);
+        }
+
+        //Fibo2
+        function fibo2() {
+            let limite = parseFloat(prompt("Fibo2 - Entrez une valeur limite :"));
+            
+            if (isNaN(limite)) {
+                console.log("Veuillez entrer un nombre valide.");
+                return;
+            }
+
+            let u0 = 0;
+            let u1 = 1;
+            let un = u0 + u1;
+            let rang = 1;
+
+            while (un <= limite) {
+                un = u0 + u1;
+                u0 = u1;
+                u1 = un;
+                rang++;
+            }
+
+            console.log("Fibo2 : Le premier terme supérieur à " + limite + 
+                        " est " + un + " (Rang : " + rang + ")");
+        }
+
+        fibo1();
+        fibo2();
+    </script>
+</body>
+</html>

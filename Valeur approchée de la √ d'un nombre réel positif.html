@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 7</title>
+</head>
+<body>
+    <script>
+        function Raca1() {
+            let A = parseFloat(prompt("Pour un nombre A entre 1 et 100:"));
+            console.log("pour un nombre entre 1 et 100 :",A)
+    
+            if (isNaN(A) || A <= 0) {
+               console.log("Veuillez entrer un nombre positif.");
+            return;
+        }
+            let un = A / 2; 
+            const precision = 0.00001; 
+            while (Math.abs(un * un - A) >= precision) {
+                un = 0.5 * (un + (A / un));
+            }
+            console.log("Valeur approchée de la racine carrée = " + un);
+
+         
+        }
+    
+        Raca1();
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 3 : Classer 3 nombres</title>
+</head>
+<body>
+    <script>
+        let n1 = Number(prompt("Saisir le 1er nombre :"));
+        console.log("le 1er nombre est:",n1)
+        let n2 = Number(prompt("Saisir le 2eme nombre :"));
+        console.log("le 2eme nombre est:",n2)
+        let n3 = Number(prompt("Saisir le 3eme nombre :"));
+        console.log("le 3eme nombre est:",n3)
+
+        let petit, moyen, grand;
+
+        if (n1 <= n2 && n1 <= n3) {
+            petit = n1;
+            if (n2 <= n3) {
+                moyen = n2;
+                grand = n3;
+            } else {
+                moyen = n3;
+                grand = n2;
+            }
+        } else if (n2 <= n1 && n2 <= n3) {
+            petit = n2;
+            if (n1 <= n3) {
+                moyen = n1;
+                grand = n3;
+            } else {
+                moyen = n3;
+                grand = n1;
+            }
+        } else {
+            petit = n3;
+            if (n1 <= n2) {
+                moyen = n1;
+                grand = n2;
+            } else {
+                moyen = n2;
+                grand = n1;
+            }
+        }
+
+        console.log("Les nombres dans l'ordre croissant : " + petit + " " + moyen + " " + grand);
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 5</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Donnez un entier positif :"));
+        console.log("Un entier positif:",n)
+        function verifierPremier(nombre) {
+            if (nombre < 2) {
+                console.log(nombre + " n'est pas un nombre premier.");
+                return;
+            }
+
+            let estPremier = true;
+            let diviseur = 0;
+
+            for (let i = 2; i < nombre; i++) {
+                if (nombre % i === 0) {
+                    estPremier = false;
+                    diviseur = i;
+                    break; 
+                }
+            }
+
+            if (estPremier) {
+                console.log(nombre + " est un nombre premier.");
+            } else {
+                console.log(nombre + " n'est pas un nombre premier, il est divisible par " + diviseur);
+            }
+        }
+
+        if (!isNaN(n)) {
+            verifierPremier(n);
+        } else {
+            console.log("Erreur : veuillez entrer un chiffre.");
+        }
+
+    </script>
+</body>
+</html>
+
+ 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 4</title>
+</head>
+<body>
+    <script>
+        let taille = 7;
+        console.log("Un motif de taille:",taille)
+        function pyramide(n) {
+            for (let i = 1; i <= n; i++) {
+                let row = "";
+                for (let s = 1; s <= (n - i); s++) {
+                    row += " "; 
+                }
+                let nbEtoiles = 2 * i - 1;
+                for (let j = 1; j <= nbEtoiles; j++) {
+                    row += "*";
+                }
+                
+                console.log(row);
+            }
+        }
+        pyramide(taille);
+
+    </script>
+</body>
+</html>
